@@ -75,26 +75,26 @@
   </div>
   <div id="b1" class="tag_content bg_f5" style="opacity: 0;">
     <div class="w_80 tag_flex">
-      <div class="tag_btn">
+      <a href="#b2" class="tag_btn">
         <div class="tag_icon tag01"></div>
         <div class="tag_img"><img src="img/tag_img01.png" alt=""></div>
         <div class="tag_text">關於沖繩海潛</div>
-      </div>
-      <div class="tag_btn">
+      </daiv>
+      <a href="#b4" class="tag_btn">
         <div class="tag_icon tag02"></div>
         <div class="tag_img"><img src="img/tag_img02.png" alt=""></div>
         <div class="tag_text">海潛</div>
-      </div>
-      <div class="tag_btn">
+      </a>
+      <a href="#b5" class="tag_btn">
         <div class="tag_icon tag03"></div>
         <div class="tag_img"><img src="img/tag_img04.png" alt=""></div>
         <div class="tag_text">滑雪</div>
-      </div>
-      <div class="tag_btn">
+      </a>
+      <a href="#b6" class="tag_btn">
         <div class="tag_icon tag04"></div>
         <div class="tag_img"><img src="img/tag_img03.png" alt=""></div>
         <div class="tag_text">防災器材</div>
-      </div>
+      </a>
     </div>
   </div>
   <div id="b2" class="main_content bg_ff" style="opacity: 0;">
@@ -256,6 +256,15 @@
       }, 500)
     });
     $('.scroll_btn').click(function(event){ 
+      event.preventDefault();
+      var x = $(this).attr('href');
+      // console.log(this);
+
+      $('html, body').animate({
+          scrollTop: $(x).offset().top-60
+      }, 500)
+    });
+    $('.tag_btn').click(function(event){ 
       event.preventDefault();
       var x = $(this).attr('href');
       // console.log(this);

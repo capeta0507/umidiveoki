@@ -356,6 +356,7 @@ ul{
   cursor: pointer;
   transition: all 0.5s ease 0s;
   position: relative;
+  display: inline-block;
 }
 .tag_content .tag_flex .tag_btn .tag_icon{
   width: 50px;
@@ -703,7 +704,7 @@ ul{
   padding: 40px 0;
   background-color: #5DB2ED;
   text-align: center;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: bold;
   color: #fff;
 }
