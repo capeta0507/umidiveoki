@@ -22,6 +22,7 @@ img{
   width: 100%;
   /* height: 60px; */
   position: fixed;
+  background-color: #5DB2ED;
   left: 0;
   margin: 0;
   z-index: 100;
@@ -52,6 +53,9 @@ img{
   margin: 10px 0;
   font-size: 3vh;
 }
+.menu-block-mb a:hover{
+  color: #5DB2ED;
+}
 .menu-block-mb .menu{
   margin-top: 25vh;
 }
@@ -63,10 +67,13 @@ img{
   margin-right: 10px;
   display: none;
 }
+.menu-m.active .bar{
+  background: #5DB2ED;
+}
 .bar{
   width: 42px;
   height: 5px;
-  background: #5DB2ED;
+  background: #fff;
   margin: 10px 0;
   border-radius: 15px;
   display: block;
@@ -278,6 +285,9 @@ ul{
 	  transform: scale(1.5);
 	}
 }
+.carousel{
+  margin-top: 55px;
+}
 .carousel-control-prev-icon{
   background-image: url(../img/prev_icon.png) !important;
 }
@@ -444,7 +454,7 @@ ul{
   width: 75%;
 }
 .pt01{
-  padding: 100px 0 200px;
+  padding: 100px 0 20vh;
 }
 .pt02{
   padding: 60px 0 60px 0;
@@ -453,13 +463,13 @@ ul{
   padding: 50px 0;
 }
 .pt04{
-  padding: 50px 0 170px 0;
+  padding: 50px 0 26vh 0;
 }
 .pt05{
-  padding: 100px 0 200px 0;
+  padding: 100px 0 27vh 0;
 }
 .pt06{
-  padding: 100px 0 230px 0;
+  padding: 100px 0 30vh 0;
 }
 .pd01{
   padding: 30px 0 200px 0;
@@ -552,7 +562,7 @@ ul{
   width: 614px;
   background-color: rgba(255,255,255,43%);
   position: absolute;
-  top: 17%;
+  top: 22%;
   left: calc(50% - 330px);
   padding: 40px;
 }
@@ -677,7 +687,7 @@ ul{
   font-size: 22px;
   color: #070707;
   font-weight: lighter;
-  line-height: 40px;
+  line-height: 45px;
 }
 .rescue .content .title{
   font-size: 42px;
@@ -701,11 +711,14 @@ ul{
   .about_txt_ctn.mt01, .about_txt_ctn.mt03{
     margin-top: 10vh;
   }
+  .okinawa_tag{
+    top: 17%;
+  }
   .about_txt_ctn.mt02{
     margin-top: 0;
   }
   .pt01{
-    padding: 100px 0 150px;
+    padding: 100px 0 19vh;
   }
   .pt02{
     padding: 60px 0 60px 0;
@@ -714,19 +727,32 @@ ul{
     padding: 50px 0;
   }
   .pt04{
-    padding: 50px 0 170px 0;
-  }
-  .pt05{
-    padding: 100px 0 200px 0;
-  }
-  .pt06{
-    padding: 100px 0 230px 0;
+    padding: 50px 0 26vh 0;
   }
   .pd01{
     padding: 30px 0 200px 0;
   }
   .pd02{
     padding: 30px 0 170px 0;
+  }
+}
+@media screen and (max-width: 1366px){
+  .about_txt_ctn.mt01, .about_txt_ctn.mt03{
+    margin-top: 5vh;
+  }
+  .okinawa_tag{
+    top: 12%;
+  }
+  .skining .content{
+    line-height: 40px;
+    font-size: 20px;
+  }
+  .rescue .content{
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .pt05{
+    padding: 100px 0 30vh 0;
   }
 }
 @media screen and (max-width: 1024px){
