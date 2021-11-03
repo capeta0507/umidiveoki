@@ -55,7 +55,10 @@
         <img src="img/carousel01.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/carousel01.png" class="d-block w-100" alt="...">
+        <img src="img/carousel02.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/carousel03.jpg" class="d-block w-100" alt="...">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -67,7 +70,7 @@
       <span class="sr-only">Next</span>
     </a>
     <div class="scroll_down">
-      <a href="#b1">scroll down</a>
+      <a href="#b1" class="scroll_btn">scroll down</a>
     </div>
   </div>
   <div id="b1" class="tag_content bg_f5" style="opacity: 0;">
@@ -84,12 +87,12 @@
       </div>
       <div class="tag_btn">
         <div class="tag_icon tag03"></div>
-        <div class="tag_img"><img src="img/tag_img03.png" alt=""></div>
+        <div class="tag_img"><img src="img/tag_img04.png" alt=""></div>
         <div class="tag_text">滑雪</div>
       </div>
       <div class="tag_btn">
         <div class="tag_icon tag04"></div>
-        <div class="tag_img"><img src="img/tag_img04.png" alt=""></div>
+        <div class="tag_img"><img src="img/tag_img03.png" alt=""></div>
         <div class="tag_text">防災器材</div>
       </div>
     </div>
@@ -138,6 +141,7 @@
   </div>
   <div id="b3" class="main_content bg_ff pd01" style="opacity: 0;">
     <img class="mbnone okw_img" src="img/bg_photo.png" alt="">
+    <img class="mbBlock" src="img/top_img.png" alt="">
     <div class="okinawa_tag">
       <div class="okinawa_cont">
         <div class="okinawa_txt">
@@ -147,6 +151,7 @@
         </div>
       </div>
     </div>
+    <img class="mbBlock okinawa_bot" src="img/bottom_img.png" alt="">
   </div>
   <div id="b4" class="main_content bg_f5" style="opacity: 0;">
     <div class="flex_ctn pt04 operators">
@@ -225,14 +230,14 @@
     $('.menu-m').on('click', function(){
       $('.menu-block-mb').stop().fadeToggle(300)
       $(this).toggleClass("active");
-      $('.head').toggleClass('bg_00');
+      $('.head').toggleClass('bg_ff');
     })
   
     if(screen.width <= 1024){
       $('.menu li a').click(function(){
         $('.menu-block-mb').fadeOut()
         $(".menu-m").removeClass("active");
-        $('.head').removeClass('bg_00');
+        $('.head').removeClass('bg_ff');
       })
     }
     if($(window).width <= 1024){
@@ -242,6 +247,15 @@
       })
     }
     $('.headItem').click(function(event){ 
+      event.preventDefault();
+      var x = $(this).attr('href');
+      // console.log(this);
+
+      $('html, body').animate({
+          scrollTop: $(x).offset().top-60
+      }, 500)
+    });
+    $('.scroll_btn').click(function(event){ 
       event.preventDefault();
       var x = $(this).attr('href');
       // console.log(this);
