@@ -401,6 +401,7 @@ ul{
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  transition: all .7s;
 }
 .bg_ff{
   background-color: #FFFFFF;

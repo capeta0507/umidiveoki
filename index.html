@@ -70,7 +70,7 @@
       <a href="#">scroll down</a>
     </div>
   </div>
-  <div id="b1" class="tag_content bg_f5">
+  <div id="b1" class="tag_content bg_f5" style="opacity: 0;">
     <div class="w_80 tag_flex">
       <div class="tag_btn">
         <div class="tag_icon tag01"></div>
@@ -94,13 +94,13 @@
       </div>
     </div>
   </div>
-  <div id="b2" class="main_content bg_ff">
+  <div id="b2" class="main_content bg_ff" style="opacity: 0;">
     <div class="flex_ctn pt01 about">
       <div class="w_45"><div class="about_title"><img src="img/about.png" alt=""></div></div>
       <div class="w_55"><div class="about_img"><img src="img/samuel-berner-8kTsEwjs8C4-unsplash.png" alt=""></div></div>
       <div class="w-100 about_txt"><img src="img/okinawa.png" alt=""></div>
     </div>
-    <div class="flex_ctn about pt02">
+    <div id="b2_1" class="flex_ctn about pt02">
       <div class="w_50"><img class="about_left" src="img/120305105_10217214535067503_3331882268599651710_n.png" alt=""></div>
       <div class="w_50">
         <div class="about_txt_ctn mt01">
@@ -109,7 +109,7 @@
         </div>
       </div>
     </div>
-    <div class="flex_ctn about pt02">
+    <div id="b2_2" class="flex_ctn about pt02">
       <div class="w_45 mbBlock">
         <img class="about_right" src="img/LINE_ALBUM_20211021_211022_2.png" alt="">
       </div>
@@ -123,7 +123,7 @@
         <img class="about_right" src="img/LINE_ALBUM_20211021_211022_2.png" alt="">
       </div>
     </div>
-    <div class="flex_ctn about pt02">
+    <div id="b2_3" class="flex_ctn about pt02">
       <div class="w_50"><img class="about_left" src="img/S__59949059.png" alt=""></div>
       <div class="w_50">
         <div class="about_txt_ctn mt03">
@@ -136,7 +136,7 @@
       </div>
     </div>
   </div>
-  <div id="b3" class="main_content bg_ff pd01">
+  <div id="b3" class="main_content bg_ff pd01" style="opacity: 0;">
     <img class="mbnone okw_img" src="img/bg_photo.png" alt="">
     <div class="okinawa_tag">
       <div class="okinawa_cont">
@@ -148,7 +148,7 @@
       </div>
     </div>
   </div>
-  <div id="b3" class="main_content bg_f5">
+  <div id="b4" class="main_content bg_f5">
     <div class="flex_ctn pt04 operators">
       <div class="w_40"><div class="operators_title"><img src="img/operators_title.png" alt=""></div></div>
       <div class="w_60"><div class="okinawa_img"><img src="img/operators_img.png" alt=""></div></div>
@@ -158,7 +158,7 @@
       <span>2003</span>於日本留學回台後在半導體設備日商公司服務了一年後於2003年創立影像製作公司，跨足節目製作、社區營造、偏遠校園服務、攝影、 設計，同時也是一位投入防救災志業長達30年的救災專家。在2015年尼泊爾大地震時因緣際會在泥破爾結識了後來將他挖腳到日本NGO服務的組織，並於2016年毅然將台灣經營19年的影視製作公司結束，投身到他以直引以為傲的志業，由志業轉為事業後，KEN哥目前主要擔任對斯里蘭卡以及亞洲開發中國家的防救災顧問，並每年赴當地為聯盟國執行所需要的救援訓練。範圍包括：山域、 陸域、水域、地震、風災組織建立等業務。KEN哥愛水，早期在水域救災的領域投得較早水上救生員、急流救生教練、水下潛水教練，水域相關的知識與技術豐富，同時是台灣第一位取得公共安全潛水教練資格的教練，並且在沖繩經營海潛期間，更完成PADI 公共安全潛水教練資格取得。這在日本是極少數潛水教練才能完成的資格，目前KEN正在往機動潛水士的更高資格邁進，期待將所學融合後, 無償分享給對於水域安全有興趣的消防夥伴。
     </div>
   </div>
-  <div id="b4" class="main_content bg_ff">
+  <div id="b5" class="main_content bg_ff" style="opacity: 0;">
     <div class="flex_ctn pt05 skining">
       <div class="w_40 mbBlock"><div class="skining_title"><img src="img/skin.png" alt=""></div></div>
       <div class="w_60"><div class="skin_img"><img src="img/skin_img.png" alt=""></div></div>
@@ -180,7 +180,7 @@
       </div>
     </div>
   </div>
-  <div id="b5" class="main_content bg_f5">
+  <div id="b6" class="main_content bg_f5" style="opacity: 0;">
     <div class="flex_ctn pt05 rescue">
       <div class="w_40 mbBlock"><div class="rescue_title"><img src="img/rescue_title.png" alt=""></div></div>
       <div class="w_60"><div class="rescue_img"><img src="img/rescue_img.png" alt=""></div></div>
@@ -259,6 +259,82 @@
         $(".head").removeClass("bg_00");
       }
     });
+    $.when( $.ready ).then(function() {
+      initScrollIn();
+    });
+    function initScrollIn(){
+      var $target = $("#b1");
+      $target.waypoint(function(direction) {
+        // console.log('direction', direction)
+        if (direction === "down"){
+          $("#b1").css({ opacity:1 });
+        } else {
+          $("#b1").css({ opacity:0 });
+        }
+      }, {
+          offset: '70%'
+      });
+
+      $target = $("#b2");
+      $target.waypoint(function(direction) {
+        // console.log('direction2', direction)
+        if (direction === "down"){
+          $("#b2").css({ opacity:1 });
+        } else {
+          $("#b2").css({ opacity:0 });
+        }
+      }, {
+          offset: '70%'
+      });
+
+      $target = $("#b3");
+      $target.waypoint(function(direction) {
+        // console.log('direction3', direction)
+        if (direction === "down"){
+          $("#b3").css({ opacity:1 });
+        } else {
+          $("#b3").css({ opacity:0 });
+        }
+      }, {
+          offset: '70%'
+      });
+
+      $target = $("#b4");
+      $target.waypoint(function(direction) {
+        // console.log('direction4', direction)
+        if (direction === "down"){
+          $("#b4").css({ opacity:1 });
+        } else {
+          $("#b4").css({ opacity:0 });
+        }
+      }, {
+          offset: '70%'
+      });
+      
+      $target = $("#b5");
+      $target.waypoint(function(direction) {
+        // console.log('direction5', direction)
+        if (direction === "down"){
+          $("#b5").css({ opacity:1 });
+        } else {
+          $("#b5").css({ opacity:0 });
+        }
+      }, {
+          offset: '70%'
+      });
+
+      $target = $("#b6");
+      $target.waypoint(function(direction) {
+        // console.log('direction5', direction)
+        if (direction === "down"){
+          $("#b6").css({ opacity:1 });
+        } else {
+          $("#b6").css({ opacity:0 });
+        }
+      }, {
+          offset: '70%'
+      });
+    }
   </script>
 </body>
 </html>
