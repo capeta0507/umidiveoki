@@ -392,10 +392,10 @@ ul{
   background-image: url(../img/icon02.png);
 }
 .tag_content .tag_flex .tag_btn .tag_icon.tag03{
-  background-image: url(../img/icon03.png);
+  background-image: url(../img/icon04.png);
 }
 .tag_content .tag_flex .tag_btn .tag_icon.tag04{
-  background-image: url(../img/icon04.png);
+  background-image: url(../img/icon03.png);
 }
 .tag_content .tag_flex .tag_btn:hover .tag_icon{
   opacity: 0;
@@ -562,18 +562,15 @@ ul{
   line-height: 40px;
 }
 .about_link{
+  width: 200px;
   text-align: center;
   background-color: #5DB2ED;
   color: #FFFFFF;
   font-size: 20px;
   border-radius: 30px;
-  padding: 10px 40px;
-  display: inline-block;
+  padding: 10px 0;
   font-weight: 500;
   margin-top: 50px;
-}
-.about_link:hover{
-  color: #FFFFFF;
 }
 .okinawa_tag{
   width: 614px;
@@ -671,12 +668,12 @@ ul{
   margin: auto;
 }
 .coming_soon{
+  width: 230px;
   text-align: center;
   color: #FFFFFF;
   font-size: 28px;
   border-radius: 30px;
-  padding: 7px 50px;
-  display: inline-block;
+  padding: 7px 0;
   font-weight: 500;
   margin-top: 50px;
   background-color: #BFBFBF;
@@ -952,6 +949,7 @@ ul{
     font-size: 30px;
   }
   .coming_soon{
+    margin: 0 auto;
     margin-top: 30px;
     font-size: 20px;
   }
@@ -992,6 +990,10 @@ ul{
   }
   .operators_content{
     width: 85%;
+  }
+  .about_link{
+    margin: auto;
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 500px){
