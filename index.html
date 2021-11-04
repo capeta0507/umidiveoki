@@ -152,6 +152,7 @@
       </div>
     </div>
     <img class="mbBlock okinawa_bot" src="img/bottom_img.png" alt="">
+    <a href="http://www.umidiveoki.com/" target="_blank"><div class="okinawa_link">前往海潛網站</div></a>
   </div>
   <div id="b4" class="main_content bg_f5" style="opacity: 0;">
     <div class="flex_ctn pt04 operators">
@@ -249,6 +250,7 @@
     $('.headItem').click(function(event){ 
       event.preventDefault();
       var x = $(this).attr('href');
+      $('.menu-block-mb').stop().fadeToggle(300);
       // console.log(this);
 
       $('html, body').animate({
