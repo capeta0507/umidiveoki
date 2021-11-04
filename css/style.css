@@ -571,6 +571,13 @@ ul{
   padding: 10px 0;
   font-weight: 500;
   margin-top: 50px;
+  transition: all .7s;
+}
+.about_link:hover{
+  transform: scale3d(1.1, 1.1, 1);
+}
+.okinawa_link:hover{
+  transform: scale3d(1.1, 1.1, 1);
 }
 .okinawa_link{
   margin: auto;
