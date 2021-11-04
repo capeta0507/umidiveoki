@@ -500,7 +500,12 @@ ul{
 .about_title{
   width: 40%;
   margin: auto;
-  margin-top: 24vh;
+  margin-top: 22vh;
+}
+.dive_resort{
+  width: 22%;
+  margin: auto;
+  margin-top: 20px;
 }
 .about_img, .okinawa_img{
   width: 100%;
@@ -514,7 +519,7 @@ ul{
   right: -100px;
   z-index: 4;
 }
-.about_title img, .about_img img, .about_txt img{
+.about_title img, .about_img img, .about_txt img, .dive_resort img{
   width: 100%;
   height: auto;
 }
@@ -698,7 +703,12 @@ ul{
 .rescue_title{
   width: 50%;
   margin: auto;
-  margin-top: 24vh;
+  margin-top: 21vh;
+}
+.rescue_plus{
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
 }
 .rescue_txt{
   position: absolute;
@@ -866,10 +876,16 @@ ul{
     width: 25%;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+  }
+  .dive_resort{
+    width: 25%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
   }
   .pt01 {
-    padding: 50px 0 50px;
+    padding: 20px 0 50px;
   }
   .about_txt {
     right: -50px;
@@ -975,7 +991,11 @@ ul{
   }
   .rescue_title{
     width: 30%;
-    margin-top: 30px;
+    margin-top: 20px;
+  }
+  .rescue_plus{
+    width: 30%;
+    margin-top: 20px;
     margin-bottom: 30px;
   }
   .rescue_img{
