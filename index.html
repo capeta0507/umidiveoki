@@ -42,11 +42,11 @@
   </div>
   <div class="menu-block-mb">
     <ul class="menu">
-      <li><a href="#b2" class="headItem">關於沖繩海潛</a></li>
-      <li><a href="#b3" class="headItem">潛水</a></li>
-      <li><a href="#b4" class="headItem">海潛經營者</a></li>
-      <li><a href="#b5" class="headItem">滑雪</a></li>
-      <li><a href="#b6" class="headItem">防災器材</a></li>
+      <li><a href="#b2" class="headItem mb_Item">關於沖繩海潛</a></li>
+      <li><a href="#b3" class="headItem mb_Item">潛水</a></li>
+      <li><a href="#b4" class="headItem mb_Item">海潛經營者</a></li>
+      <li><a href="#b5" class="headItem mb_Item">滑雪</a></li>
+      <li><a href="#b6" class="headItem mb_Item">防災器材</a></li>
     </ul>
   </div>
 	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -284,13 +284,23 @@
     $('.headItem').click(function(event){ 
       event.preventDefault();
       var x = $(this).attr('href');
-      $('.menu-block-mb').stop().fadeToggle(300);
       // console.log(this);
 
       $('html, body').animate({
           scrollTop: $(x).offset().top-60
       }, 500)
     });
+    $('.mb_Item').click(function(){
+      event.preventDefault();
+      var x = $(this).attr('href');
+      $('.menu-block-mb').stop().fadeToggle(300)
+      $('.menu-m').removeClass("active");
+      // console.log(this);
+
+      $('html, body').animate({
+          scrollTop: $(x).offset().top-60
+      }, 500)
+    })
     $('.scroll_btn').click(function(event){ 
       event.preventDefault();
       var x = $(this).attr('href');
